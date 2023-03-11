@@ -9,13 +9,15 @@ import { PersistGate } from 'redux-persist/integration/react';
 
 import { store, persistor } from '../redux/store';
 
-import StartPage from 'pages/StartPage/StartPage';
-import PhoneBookPage from 'pages/PhoneBookPage/PhoneBookPage';
-import RegisterPage from 'pages/RegisterPage/Registerpage';
-import LoginPage from 'pages/LoginPage/LoginPage';
-
-import UserMenu from './UserMenu/UserMenu';
 import AuthLayout from './AuthLayout/AuthLayout';
+import UserMenu from './UserMenu/UserMenu';
+
+const StartPage = lazy(() => import('../pages/StartPage/StartPage'));
+const PhoneBookPage = lazy(() =>
+  import('../pages/PhoneBookPage/PhoneBookPage')
+);
+const RegisterPage = lazy(() => import('../pages/RegisterPage/RegisterPage'));
+const LoginPage = lazy(() => import('../pages/LoginPage/LoginPage'));
 
 export const App = () => {
   return (
