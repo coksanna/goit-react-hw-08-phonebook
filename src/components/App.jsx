@@ -12,7 +12,6 @@ import { store, persistor } from '../redux/store';
 import AuthLayout from './AuthLayout/AuthLayout';
 import NavMenu from './NavMenu/NavMenu';
 
-const StartPage = lazy(() => import('../pages/StartPage/StartPage'));
 const PhoneBookPage = lazy(() =>
   import('../pages/PhoneBookPage/PhoneBookPage')
 );
@@ -29,7 +28,6 @@ export const App = () => {
               <NavMenu />
               <Suspense fallback={<p>...Loading</p>}>
                 <Routes>
-                  <Route path="/" element={<StartPage />} />
                   <Route element={<PrivateRoute />}>
                     <Route path="/contacts" element={<PhoneBookPage />} />
                   </Route>
