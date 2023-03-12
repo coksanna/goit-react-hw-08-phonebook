@@ -1,5 +1,4 @@
 import { useDispatch } from 'react-redux';
-// import { Navigate } from 'react-router-dom';
 
 import { signup } from '../../redux/auth/auth-operations';
 
@@ -12,13 +11,8 @@ const RegisterPage = () => {
     dispatch(signup(data));
   };
 
-  //   if (isLogin) {
-  //     return <Navigate to="/phonebook" />;
-  //   }
-
   return (
     <div className="container">
-      <h1 className="page-title">Register page</h1>
       <RegisterForm onSubmit={handleSignup} />
     </div>
   );

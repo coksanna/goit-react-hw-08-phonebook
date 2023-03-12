@@ -1,0 +1,30 @@
+.userMenu {
+  display: flex;
+  gap: 20px;
+  justify-content: center;
+  align-items: baseline;
+}
+
+.button {
+  padding-top: 5px;
+  padding-bottom: 5px;
+  padding-left: 20px;
+  padding-right: 20px;
+  font-size: 16px;
+  border: 1px solid rgb(53, 152, 114);
+  border-radius: 3px;
+  color: rgb(53, 152, 114);
+  cursor: pointer;
+  box-shadow: 0px 2px 4px -1px rgba(0, 0, 0, 0.2),
+    0px 4px 5px 0px rgba(0, 0, 0, 0.14), 0px 1px 10px 0px rgba(0, 0, 0, 0.12);
+}
+
+.button:hover {
+  background-color: rgb(53, 152, 114);
+  color: #fff;
+}
+
+.email {
+  font-size: 18px;
+  color: white;
+}

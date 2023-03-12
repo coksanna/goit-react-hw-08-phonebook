@@ -1,5 +1,4 @@
 import { useDispatch } from 'react-redux';
-// import { Navigate } from 'react-router-dom';
 
 import { login } from '../../redux/auth/auth-operations';
 
@@ -12,13 +11,8 @@ const LoginPage = () => {
     dispatch(login(data));
   };
 
-  //   if (isLogin) {
-  //     return <Navigate to="/phonebook" />;
-  //   }
-
   return (
     <div className="container">
-      <h1 className="page-title">Login page</h1>
       <LoginForm onSubmit={handleLogin} />
     </div>
   );

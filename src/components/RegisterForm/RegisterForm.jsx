@@ -31,18 +31,24 @@ const RegisterForm = ({ onSubmit }) => {
   const { name, email, password } = state;
 
   return (
-    <form className={css.form} onSubmit={handleSubmit}>
-      <TextField value={name} handleChange={handleChange} {...fields.name} />
-      <TextField value={email} handleChange={handleChange} {...fields.email} />
-      <TextField
-        value={password}
-        handleChange={handleChange}
-        {...fields.password}
-      />
-      <button className={css.formBtn} type="submit">
-        Register
-      </button>
-    </form>
+    <div className={css.wrapper}>
+      <form className={css.form} onSubmit={handleSubmit}>
+        <TextField value={name} handleChange={handleChange} {...fields.name} />
+        <TextField
+          value={email}
+          handleChange={handleChange}
+          {...fields.email}
+        />
+        <TextField
+          value={password}
+          handleChange={handleChange}
+          {...fields.password}
+        />
+        <button className={css.formBtn} type="submit">
+          Register
+        </button>
+      </form>
+    </div>
   );
 };
 

@@ -15,7 +15,7 @@ import ContactList from '../ContactList/ContactList';
 import Filter from '../Filter/Filter';
 import ContactForm from '../ContactForm/ContactForm';
 
-import css from '../ContactForm/contact-form.module.css';
+import css from './phoneBook.module.css';
 
 const PhoneBook = () => {
   const filteredContacts = useSelector(getFilteredContacts);
@@ -41,7 +41,7 @@ const PhoneBook = () => {
   const isContacts = Boolean(filteredContacts.length);
 
   return (
-    <>
+    <div className={css.phonebook}>
       <div className={css.wrapper}>
         <h2 className={css.title}>Phonebook</h2>
         <ContactForm onSubmit={handleAddContact} />
@@ -57,7 +57,7 @@ const PhoneBook = () => {
         )}
         {!isContacts && <p className={css.message}>No contacts in list</p>}
       </div>
-    </>
+    </div>
   );
 };
 

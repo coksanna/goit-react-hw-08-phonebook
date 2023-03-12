@@ -6,9 +6,15 @@
 }
 
 .btn {
-  border: 1px solid red;
-  color: red;
+  border: 1px solid rgb(53, 152, 114);
+  color: rgb(53, 152, 114);
   border-radius: 3px;
   margin-left: auto;
   margin-right: 40px;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: rgb(53, 152, 114);
+  color: #fff;
 }

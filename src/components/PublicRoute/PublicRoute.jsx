@@ -11,7 +11,7 @@ const PublicRoute = () => {
   }
 
   if (isLogin) {
-    return <Navigate to="/phonebook" />;
+    return <Navigate to="/contacts" />;
   }
 
   return <Outlet />;

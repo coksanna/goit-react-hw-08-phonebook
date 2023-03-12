@@ -1,21 +1,27 @@
-import { useSelector } from 'react-redux';
+import { useSelector, useDispatch } from 'react-redux';
 
-import Auth from 'components/Auth/auth';
-import User from 'components/User/User';
+import { getUser } from '../../redux/auth/auth-selector';
+
+import { logout } from '../../redux/auth/auth-operations';
 
 import css from './userMenu.module.css';
 
-import { isUserLogin } from 'redux/auth/auth-selector';
+const User = () => {
+  const { email } = useSelector(getUser);
+  const dispatch = useDispatch();
 
-const UserMenu = () => {
-  const isLogin = useSelector(isUserLogin);
+  const onLogout = () => {
+    dispatch(logout());
+  };
 
   return (
     <div className={css.userMenu}>
-      {!isLogin && <Auth />}
-      {isLogin && <User />}
+      <p className={css.email}>{email}</p>
+      <button className={css.button} onClick={onLogout}>
+        Log out
+      </button>
     </div>
   );
 };
 
-export default UserMenu;
+export default User;

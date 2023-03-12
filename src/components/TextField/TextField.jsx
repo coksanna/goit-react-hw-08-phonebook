@@ -8,7 +8,9 @@ const TextField = ({ label, handleChange, ...props }) => {
 
   return (
     <div className={css.wrapper}>
-      <label htmlFor={id}>{label}</label>
+      <label htmlFor={id} className={css.label}>
+        {label}
+      </label>
       <input className={css.field} id={id} onChange={handleChange} {...props} />
     </div>
   );
